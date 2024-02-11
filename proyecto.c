@@ -5,7 +5,7 @@
 int main(){
     srand(time(NULL));//Definimos la semilla que va cambiando respecto al tiempo de nuestra computadora
     int nave[4];//0.-Vida, 1.-velocidad, 2.-distancia a otros planetas y objetos, 2.-misiles
-    int asteroides, objetos,nivel, nivelval, planetas[2]; //0.-PLaneta con vida, 1;- Planeta sin vida, hoyosN;
+    int asteroides, objetos,nivel, nivelval, avanzar, planetas[2]; //0.-PLaneta con vida, 1;- Planeta sin vida, hoyosN;
     printf("BIENIDO A {NOMBRE DEL JUEGO POR DETERMINAR} |=>\n");
     do
     {
@@ -15,20 +15,38 @@ int main(){
             printf("++++ Nivel 2 ++++\n");
             printf("++++ Nivel 3 ++++\n");
             printf("===================\n");
-            printf("Ingrese el numero del nivel que desea jugar\n");
+            printf("Ingrese el numero del nivel que desea jugar\n|=>");
             scanf("%d", &nivel);
         switch (nivel)
         {
         case 1:
-            printf("NIVEL 1\n");
+            printf("////////////////NIVEL 1////////////////\n");
+            printf("¿Desea avanzar al siguiente nivel? 1.-(Si) : Cualquier tecla(NO) \n|=>");
+            scanf("%d", &avanzar);
             nivelval = 1;
-            break;
+            if (avanzar == 1)
+            {
+                printf(".............Redirigiendo al Segundo nivel.............\n\n");
+            }
+            else{
+                break;
+            }
+            
         case 2:
-            printf("NIVEL 2\n");
+            printf("////////////////NIVEL 2////////////////\n");
             nivelval = 1;
-            break;
+            printf("¿Desea avanzar al siguiente nivel? 1.-(Si) : Cualquier tecla(NO) \n|=>");
+            scanf("%d", &avanzar);
+            nivelval = 1;
+            if (avanzar == 1)
+            {
+                printf(".............Redirigiendo al Tercer nivel nivel.............\n\n");
+            }
+            else{
+                break;
+            }
         case 3:
-            printf("NIVEL 3\n");
+            printf("////////////////NIVEL 3////////////////\n");
             nivelval = 1;
             break;
         default:
@@ -39,5 +57,5 @@ int main(){
             break;
         }
     } while (nivelval == 0);
-    
+    printf("GRACIAS POR JUGAR, VUELVA PRONTO :)");
 }
