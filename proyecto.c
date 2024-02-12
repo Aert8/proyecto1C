@@ -27,6 +27,7 @@ int main(){
             if (avanzar == 1)
             {
                 printf(".............Redirigiendo al Segundo nivel.............\n\n");
+                avanzar = 0;
             }
             else{
                 break;
