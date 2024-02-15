@@ -35,7 +35,7 @@ int main(){
                 int rango = 15000-8000;
                 int rangod = 11500 - 5000;
                 nave[velocidad] = rand()%rango+8000;
-                nave[distancia] = rand()%rango+4000;
+                nave[distancia] = rand()%rangod+5000;
                 //Definidendo el tipo de objeto que encontrara, si nave o capsulas
                 tobjeto = rand()%2;
                 //Mostrando el tipo de objeto segun lo definido
@@ -139,9 +139,7 @@ int main(){
                 
                 kmarte++;
                 
-            } while (nave[misiles] > 7800 && nave[vida] > 1900 && kmarte <=10 && chocar == 0);
-            
-			
+            } while (nave[misiles] > 7800 && nave[vida] > 1900 && kmarte <=7 && chocar == 0);
 			//Fase  Final
             if (pasar == 1)
             {
@@ -187,6 +185,14 @@ int main(){
         case 2:
             printf("////////////////NIVEL MEDIO////////////////\n");
             nivelval = 1;
+            
+            nave[vida]= 1500;
+            nave[misiles]= 7800;
+            nave[velocidad]= 0;
+            nave[distancia]= 0;
+         
+            
+            //Fase Final 
             printf("¿Desea avanzar al siguiente nivel? 1.-(Si) : Cualquier tecla(NO) \n|=>");
             scanf("%d", &avanzar);
             nivelval = 1;
